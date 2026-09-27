@@ -1,0 +1,18 @@
+[project]
+name = "seller-cart-checker"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["patchright>=1.49,<2"]
+
+[project.scripts]
+seller-cart = "seller_cart.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
